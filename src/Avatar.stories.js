@@ -37,16 +37,16 @@ export const Initials = (args) => (
 );
 
 export const Loading = (args) => (
-    <div>
-      <Avatar {...args} size="large" />
-      <Avatar {...args} size="medium" />
-      <Avatar {...args} size="small" />
-      <Avatar {...args} size="tiny" />
-    </div>
-  );
-  Loading.args = {
-    loading: true,
-  };
+  <div>
+    <Avatar {...args} size="large" />
+    <Avatar {...args} size="medium" />
+    <Avatar {...args} size="small" />
+    <Avatar {...args} size="tiny" />
+  </div>
+);
+Loading.args = {
+  loading: true,
+};
 
 export const Large = (args) => (
   <div>
@@ -59,3 +59,13 @@ export const Large = (args) => (
     />
   </div>
 );
+
+const Template = (args) => <Avatar {...args} />;
+
+export const Controls = Template.bind({});
+Controls.args = {
+  loading: false,
+  size: "tiny",
+  username: "Nacen",
+  src: "https://avatars.githubusercontent.com/u/23380488?s=60&v=4",
+};
